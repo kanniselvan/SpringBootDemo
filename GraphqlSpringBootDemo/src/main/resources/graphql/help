@@ -1,0 +1,99 @@
+https://www.danvega.dev/blog/2022/05/17/spring-for-graphql/
+refer above URL
+
+
+http://localhost:6060/graphql
+POST:
+Input:
+----
+query {
+  allBooks {
+    title
+    pages
+    rating {
+      star
+    }
+    author {
+      firstName
+      lastName
+    }
+  }
+}
+OutPut:
+=======
+{
+    "data": {
+        "allBooks": [
+            {
+                "title": "Reactive Spring",
+                "pages": 484,
+                "rating": {
+                    "star": "⭐️⭐️⭐️⭐️⭐️️️️"
+                },
+                "author": {
+                    "firstName": "Josh",
+                    "lastName": "Long"
+                }
+            },
+            {
+                "title": "Spring Boot Up & Running",
+                "pages": 328,
+                "rating": {
+                    "star": "⭐️⭐️⭐️⭐️⭐️️️️"
+                },
+                "author": {
+                    "firstName": "Mark",
+                    "lastName": "Heckler"
+                }
+            },
+            {
+                "title": "Hacking with Spring Boot 2.3",
+                "pages": 392,
+                "rating": {
+                    "star": "⭐️⭐️⭐️⭐️⭐️️️️"
+                },
+                "author": {
+                    "firstName": "Greg",
+                    "lastName": "Turnquist"
+                }
+            }
+        ]
+    }
+}
+
+###################################################################
+
+http://localhost:6060/graphql
+POST:
+Input:
+----
+query {
+  findOne(id: 1) {
+    title
+    pages
+    rating {
+      star
+    }
+    author {
+      firstName
+      lastName
+    }
+  }
+}
+outPut:
+=======
+{
+    "data": {
+        "findOne": {
+            "title": "Reactive Spring",
+            "pages": 484,
+            "rating": {
+                "star": "⭐️⭐️⭐️⭐️⭐️️️️"
+            },
+            "author": {
+                "firstName": "Josh",
+                "lastName": "Long"
+            }
+        }
+    }
+}

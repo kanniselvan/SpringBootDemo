@@ -1,0 +1,15 @@
+server:
+  port: 6060
+
+spring:
+  h2:
+    console:
+      path:/h2-console:
+      enabled:true:
+  graphql:
+    graphiql:
+      enabled: true
+      path: /graphiql
+    schema:
+      printer.enabled: true
+
