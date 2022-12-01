@@ -1,0 +1,18 @@
+keycloak:
+  realm: AruniyaTechkno
+  auth-server-url: http://localhost:8080
+  ssl-required: external
+  resource: HMS
+  credentials:
+    secret: 122365599666
+  use-resource-role-mappings: true
+  public-client: false
+  bearer-only: true
+  cors: true
+
+server:
+  port: 9090
+
+spring:
+  main:
+    allow-circular-references: true
